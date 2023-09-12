@@ -1,9 +1,6 @@
 #!/usr/bin/python3
-
 def no_c(my_string):
-    updated_str = ''
-    for i in my_string:
-        if i != 'c' and i != 'C':
-            updated_str += i
-    return (updated_str)
-
+    if my_string is not None:
+        localstr = my_string.translate({ord('c'): None})
+        localstr = localstr.translate({ord('C'): None})
+        return localstr
